@@ -70,3 +70,4 @@ mc0.act_n <- lapply(mc0.act, gabi::apply_bxcx)
 save(mc0.act, file = "pipelined data/Acute Exposure/Padilla_OP_Acute_mc0.rda")
 save(mc0.act_n, file = "pipelined data/Acute Exposure/Padilla_OP_Acute_mc0_n.rda")
 
+rm(list = ls())

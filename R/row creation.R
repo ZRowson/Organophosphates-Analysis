@@ -35,11 +35,11 @@ load(here("pipelined data","Developmental Exposure","Padilla_OP_Dev_mc0_n.rda"))
 
 # Create tcpl row objects
 
-# Gather chemical names. Separate chemicals that have only one replicate or had a concentration group that was removed
+# Gather chemical names
 chemicals <- mc0.dev_n[[1]][["data"]][wllt=="t",unique(cpid)]
 names(chemicals) <- chemicals
 
-# Create rows for chemicals with two replicates and no concentration groups removed
+# Create rows for chemicals
 rows.dev_n <- lapply(chemicals, function(chm) {
   # Create row objects for each endpoint
   lapply(mc0.dev_n, function(list) {
@@ -54,6 +54,8 @@ rows.dev_n <- lapply(chemicals, function(chm) {
 # Save row objects
 save(rows.dev_n, file = "pipelined data/Developmental Exposure/Padilla_OP_Dev_rows_n.rda")
 
+rm(list = ls())
+
 
 # Acute Exposure ----------------------------------------------------------
 
@@ -63,11 +65,11 @@ load(here("pipelined data","Acute Exposure","Padilla_OP_Acute_mc0_n.rda"))
 
 # Create tcpl row objects
 
-# Gather chemical names. Separate chemicals that have only one replicate or had a concentration group that was removed
+# Gather chemical names
 chemicals <- mc0.act_n[[1]][["data"]][wllt=="t",unique(cpid)]
 names(chemicals) <- chemicals
 
-# Create rows for chemicals with two replicates and no concentration groups removed
+# Create rows for chemicals
 rows.act_n <- lapply(chemicals, function(chm) {
   # Create row objects for each endpoint
   lapply(mc0.act_n, function(list) {
@@ -81,3 +83,5 @@ rows.act_n <- lapply(chemicals, function(chm) {
 
 # Save row objects
 save(rows.act_n, file = "pipelined data/Acute Exposure/Padilla_OP_Acute_rows_n.rda")
+
+rm(list = ls())

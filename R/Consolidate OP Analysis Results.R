@@ -25,7 +25,7 @@
 
 
 # Load developmental tcplfits
-load("~/Desktop/Stephanie Projects/OP Analysis/pipelining/pipelined data/Developmental Exposure/Padilla_OP_Dev_tcplfits.rda")
+load("~/Desktop/StephanieProjects/OPAnalysis/pipelining/pipelined data/Developmental Exposure/Padilla_OP_Dev_tcplfits.rda")
 
 # Create table of tcpl output data for developmental exposures
 data <- lapply(tcplfits.dev_n, function(chm) {
@@ -41,7 +41,7 @@ save(OP_dev_tcpl_out, file = "Results/Padilla_OP_Dev_tcpl_out.Rdata")
 
 
 # Load acute tcplfits
-load("~/Desktop/Stephanie Projects/OP Analysis/pipelining/pipelined data/Acute Exposure/Padilla_OP_Acute_tcplfits.rda")
+load("~/Desktop/StephanieProjects/OPAnalysis/pipelining/pipelined data/Acute Exposure/Padilla_OP_Acute_tcplfits.rda")
 
 # Create table of tcpl output data for Acute exposures
 data <- lapply(tcplfits.act_n, function(chm) {

@@ -33,7 +33,7 @@ here::i_am("R/tcplfitter.R")
 
 
 # Load row data
-load("~/Desktop/Stephanie Projects/OP Analysis/pipelining/pipelined data/Developmental Exposure/Padilla_OP_Dev_rows_n.rda")
+load("pipelined data/Developmental Exposure/Padilla_OP_Dev_rows_n.rda")
 
 # Get tcplfits
 tcplfits.dev_n <- lapply(rows.dev_n, function (chm) {
@@ -48,7 +48,7 @@ save(tcplfits.dev_n, file = "pipelined data/Developmental Exposure/Padilla_OP_De
 
 
 # Load row data
-load("~/Desktop/Stephanie Projects/OP Analysis/pipelining/pipelined data/Acute Exposure/Padilla_OP_Acute_rows_n.rda")
+load("pipelined data/Acute Exposure/Padilla_OP_Acute_rows_n.rda")
 
 # Get tcplfits
 tcplfits.act_n <- lapply(rows.act_n, function (chm) {
